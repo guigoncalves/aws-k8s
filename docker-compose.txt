@@ -1,0 +1,5 @@
+-- run containers
+docker-compose up/down
+
+--rebuild all containers
+docker-compose up --build

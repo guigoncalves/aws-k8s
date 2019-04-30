@@ -1,0 +1,15 @@
+-- build an image from docker file
+docker build -t guilhermesouza/redis:latest .
+
+-- build dockerfile with different name
+docker build -f dockerfile.dev .
+
+--run
+docker run guilhermesouza/redis
+
+-- run mapping port
+-- requisicoes no localhost:5000 serao redirecionadas para container 8080
+docker run -p 5000:8080 guilhermesouza/redis
+
+-- build an image from container with default command specified	
+docker commit -c 'CMD ["redis-server"]' <container-id>

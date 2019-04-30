@@ -1,0 +1,28 @@
+-- list all containers active
+docker ps 
+
+-- list all containers executed 
+docker ps --all
+
+-- clear all containers 
+docker system prune
+
+-- create container
+docker create <image-id> <command>
+
+-- start docker
+docker start <container>
+
+-- create + start -a
+docker run <image> <command>
+
+-- show logs
+docker logs <container>
+
+-- stop container
+docker stop <container-id> 
+docker kill <container-id>
+
+-- run command inside container
+docker exec -it <container-id> command
+docker exec -it <container-id> sh //open shell inside container
